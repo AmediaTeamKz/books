@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Book
+		link(rel="stylesheet", href="css/main.min.css")
+		script(src="js/scripts.min.js") 
+	body
+		include header.pug
+		include breadcrumbs.pug
+		section.dfc.head-2
+			.container.center.aic.dfc
+				h1.head2-title раздел помощь
+				form.searchForm(action="index.php")
+					button.searchBtn(type="submit")
+						img.icon-top(src="img/svg/search-icon.svg", alt="search")
+					input.searchValue(type="text" placeholder="поиск по каталогу")
+		section.faq-sectino
+			.container
+				h1.section-title.tal управление подпиской
+				.wrp-faq.pm
+					
+					-
+						var ot = [ 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?',
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?',
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?',
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?',
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?'
+							];
+					-
+						var qu = [	'How does the trial work?',
+									'When will I be charged?',
+									'Do subscriptions auto-renew?',
+									'How can I cancel my trial or subscription?',
+									'Can I switch between a yearly and a monthly subscription?'
+								];
+
+					each quesh, index in qu
+						a(href="#").click-faq
+							span.arr
+								img(src="../img/svg/arrow.svg", alt="aa")
+							= quesh
+						p.otvet.desc= ot[index]
+			.container
+				.center.qq
+					h4.section-title Не нашли ответ на свой вопрос?
+					button.btn-default написать в тех поддержку
+		include footer.pug

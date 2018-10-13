@@ -1,0 +1,26 @@
+footer#footer.footer
+	.container
+		.row
+			each num in ['БИБЛИОТЕКА','ПОДПИСКА','SMART READING','КОНТАКТЫ']
+				.col-md-3
+					span.footer-pod= num
+					ul
+						each name in ['menu','menu2']
+							li
+								a(href="#")= name
+
+
+.container
+	.sub-fo
+		ul.sub-fot-list
+			li.sub-fot-text Принимаем к оплате:
+			each src in ['../img/svg/masterCard.svg','../img/svg/visacard.svg']
+				li.sub-foo-icon
+					a(href="#")
+						img(src=src, alt="")
+
+		ul.soc-icon-footer
+			each icon,index in ['img/svg/inst.svg','img/svg/in.svg','img/svg/fac.svg']
+				li.soc-item-icon
+					a(href="#")
+						img(src=icon, alt="")

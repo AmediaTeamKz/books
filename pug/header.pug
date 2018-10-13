@@ -1,0 +1,70 @@
+#modalbg
+	.modalWindow
+		.modalHead
+			p.modalTitle написать в тех поддержку
+
+			span.close
+				span.line
+				span.line
+		.modalBody
+			form#modalForm.dfc
+				input(type="text" placeholder="Ваше имя")
+				input(type="text" placeholder="Ваш номер")
+				input(type="submit")
+
+header#header
+	.top-nav
+		.container
+			a(href="#")
+				img.logotype(src="img/svg/logotype.svg", alt="logotype")
+
+			form.searchForm(action="index.php")
+				button.searchBtn(type="submit")
+					img.icon-top(src="img/svg/search-icon.svg", alt="search")
+				input.searchValue(type="text" placeholder="поиск по каталогу")
+
+			nav.top-menu
+				ul.main-menu-top
+					li.items-list
+						a(href="/index.html") стр 1
+					li.items-list
+						a(href="/helpfaq.html") стр 2
+					li.items-list
+						a(href="/single.html") стр 3
+					li.items-list
+						a(href="/tarif.html") стр 4
+					li.items-list
+						a(href="/help.html") стр 5
+
+
+
+				ul
+					li.items-list
+						a(href="#").main Личный кабинет
+						ul.wrp-submenu
+							li
+								a(href="#").parent-sub Мой профиль
+								ul.sublbltr
+									li
+										a(href="#") Иван Иванов
+									li
+										a(href="#") email@exmpl.com
+									li
+										a(href="#") Начало: 01.10.2018
+									li
+										a(href="#") Окончание: 01.11.2018
+									li
+										a(href="#") тариф "Зачитайся"
+							li
+								a(href="#") Платежная информация
+							li
+								a(href="#") Платежная информация
+							li
+								a(href="#") Помощь
+							li
+								a(href="#") Выйти
+			button.btn-hum 
+				span
+				span
+				span
+			//- a(href="#").auth-link.btn-default Войти

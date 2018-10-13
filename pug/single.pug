@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Book
+		link(rel="stylesheet", href="css/main.min.css")
+		script(src="js/scripts.min.js") 
+	body
+		include header.pug
+		include breadcrumbs.pug
+		section#index-demos.page
+			.container
+				.demos-v
+					.wrp-single
+						.wrp-single-info
+							h3.section-title.single Girl, Wash Your Face
+							p.single-description Stop Believing the Lies About  Who You  Are So You Can Become Who You Were Meant to Be
+							small.short-desct By Rachel Hollis
+							.wrp-info-time
+								span.status
+								span.text-time Время чтения:
+								span.self-time 13 минут
+						
+							.wrp-btn-single
+								button.btn-default слушать
+								button.btn-pu читать книгу
+							.wrap-tabs
+								ul.tabs-nav
+									li(tab-index='1').active Описание
+									li(tab-index='2') Для кого
+									li(tab-index='3') Об авторе
+
+								ul.tabs-content
+									li(index='1').active
+										p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe alias ut quas vitae minima quidem adipisci unde esse magni enim maxime quo ipsum, autem architecto nesciunt dolorum iste sunt culpa nam laborum ab. Rerum hic nostrum deserunt assumenda quidem eos porro, quo minus molestias autem?
+									li(index='2')
+										p ddStop Believing the Lies About  Who You  Are So You Can Become Who You Were Meant to Be
+									li(index='3')
+										p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, porro, doloribus. Animi quis unde reprehenderit, distinctio sed dignissimos, possimus facilis ratione ab officiis voluptates nemo sequi. Similique necessitatibus libero blanditiis nulla unde sint provident corporis totam pariatur neque cumque dolore, illum dolorum esse quos nihil doloremque consequuntur ipsa veritatis, itaque soluta optio aut quibusdam. Delectus doloremque fugiat veritatis accusantium est blanditiis rem! Maiores voluptate, quasi nihil! Voluptates perferendis, amet neque corrupti at dicta quisquam dolorum architecto voluptas soluta expedita blanditiis nostrum laboriosam, eius cupiditate, maxime sunt magnam harum. Harum reiciendis iste ullam est, facere quo consectetur repudiandae tempore blanditiis odit.
+
+						.wrp-single-album
+							img(src="../img/single.jpg", alt="")
+				.wrp-pohozh
+					h4.section-title.tal похожие книги
+					.pohozh
+						each value in ['1','2','3','4']
+							.box
+		include footer.pug

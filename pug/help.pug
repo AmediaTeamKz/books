@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Book
+		link(rel="stylesheet", href="css/main.min.css")
+		script(src="js/scripts.min.js") 
+	body
+		include header.pug
+		include breadcrumbs.pug
+		section.dfc.head-2
+			.container.center.aic.dfc
+				h1.head2-title раздел помощь
+				form.searchForm(action="index.php")
+					button.searchBtn(type="submit")
+						img.icon-top(src="img/svg/search-icon.svg", alt="search")
+					input.searchValue(type="text" placeholder="поиск по каталогу")
+		section#steps
+			.container
+				.df.fww
+					-
+						var arr = [	'подписка',
+									'условия',
+									'для авторов',
+									'О нас',
+									'предложения',
+									'руководства',
+								] 
+					each name, inde in arr
+						if inde == 0 
+							-var active = 'active';
+						else
+							-var active = '';
+
+						a(href="#").item-box.dfc.aic.jcc
+							div( class=active).item-wrp.df
+								p.namePP.center= name
+			.container
+				.center.qq
+					h4.section-title Не нашли ответ на свой вопрос?
+					button.btn-default написать в тех поддержку
+		include footer.pug

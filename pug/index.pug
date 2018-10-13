@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Book
+		link(rel="stylesheet", href="css/main.min.css")
+		script(src="js/scripts.min.js") 
+	body
+		include header.pug
+		#header-index.header-index
+			.container
+				.wrp-text-center
+					h1.section-title более 10000 книг
+					small Stop Believing the Lies About  Who You  Are So You Can Become Who You Were Meant to Be
+					button.btn-default.large написать в тех поддержку
+
+		section#index-demos
+			.container
+				.wrp-center-text
+					h3.section-title популярные книги
+					ul.list-genre
+						each name, index in ['Жанр','Жанр','Жанр','Жанр']
+							li.li-genre
+								if index==0
+									-var lol='btn-default active';
+								else
+									-var lol='btn-gen';
+								a(href="#" class=lol)= name+':'+index
+				.demos-v
+					each value in ['1','2','3','4','5','6']
+						.box
+				.wrp-center-text
+					button.purbtn.btn-pu перейти в каталог
+				
+		section#info-s
+			.container
+				.wrp-info-item
+					-var icons  = ['../img/svg/audio.svg','../img/svg/device.svg','../img/svg/wifi.svg'];
+					each val, index in ['Audio and Text','One Account, Multiple Devices','Enjoy Offline'] 
+						.info-item
+							.info-icon
+								img(src=icons[index], alt="")
+							p.paraq= val
+		section#steps
+			.container
+				h4.section-title выполните всего 3 простых шага <br/> и получите доступ к 10000 интересных книг
+				.box-steps
+					-var name = ['Быстрая регистрация','Выбор тарифа','Доступ к библиотеке'];
+					-var subname = ['быстро, просто','от 300 тенге','более 10000 книг'];
+					each steps, index in {0:'../img/svg/btrreg.svg',1:'../img/svg/vibtar.svg',2:'../img/svg/dostkbib.svg'}
+						.wrp-steps
+							.icon-steps
+								img(src=steps, alt="")
+							p= name[index]
+							small= subname[index]
+				a.btn-default.large.centerX(href="#") Попробовать бесплатно
+		include footer.pug

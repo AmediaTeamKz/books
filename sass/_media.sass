@@ -1,0 +1,73 @@
+@media screen and (max-width: 990px)
+	.top-nav
+		.container
+			height: unset
+			padding-top: 17px
+			padding-bottom: 17px
+			position: relative
+
+	.top-menu
+		padding: 17px 0
+	.logotype
+		width: 100%
+		margin-bottom: 15px
+
+	.faq-sectino
+		.wrp-faq
+			a
+				font-size: 16px
+
+
+@media screen and (max-width: 492px)
+	li.items-list:after
+		display: none
+	.top-menu
+		z-index: 111
+		position: absolute
+		top: 100%
+		background: $default-bg
+		width: 100%
+		left: 0
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		display: none
+		ul
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			margin-right: 0
+			text-align: right
+			margin: 0!important
+			margin-right: 15px !important
+			li
+				// margin-bottom: 15px
+				display: block
+				a
+					display: block
+					padding: 15px
+	.btn-hum
+		width: 32px
+		height: 30px
+		border: none
+		background-color: transparent
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		margin-left: 15px
+		span
+			display: block
+			height: 4px
+			border-radius: 1em
+			width: 32px
+			background: #FFFFFF
+	.logotype
+		margin-right: 0

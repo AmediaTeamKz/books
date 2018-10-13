@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Book
+		link(rel="stylesheet", href="css/main.min.css")
+		script(src="js/scripts.min.js") 
+	body
+		include header.pug
+		include breadcrumbs.pug
+		section#index-demos.page
+			.container
+				.demos-v
+					h1.section-title.tac Go Premium and get the best of Blinkist
+					.wrp-box-tarif
+						-var price = ['6.67 €','6.67 €'];
+						-var btn = ['btn-default','btn-pu'];
+						each name, num in ['Premium yearly','Premium monthly']
+							.box-tarif
+								h4.tarif-name= name
+								span.price-tarif= price[num]
+								button(class=btn[num]) Купить
+					.wrp-info-item
+						-var icons  = ['../img/svg/audio.svg','../img/svg/device.svg','../img/svg/wifi.svg'];
+						each val, index in ['Audio and Text','One Account, Multiple Devices','Enjoy Offline'] 
+							.info-item
+								.info-icon
+									img(src=icons[index], alt="")
+								p.paraq= val
+		
+
+		section.faq-sectino
+			.container
+				h1.section-title.tac Plans & Pricing FAQs
+				.line-center
+				.wrp-faq
+					
+					-
+						var ot = [ 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?',
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?',
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?',
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?',
+								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi?'
+							];
+					-
+						var qu = [	'How does the trial work?',
+									'When will I be charged?',
+									'Do subscriptions auto-renew?',
+									'How can I cancel my trial or subscription?',
+									'Can I switch between a yearly and a monthly subscription?'
+								];
+
+					each quesh, index in qu
+						a(href="#").click-faq
+							span.arr
+								img(src="../img/svg/arrow.svg", alt="aa")
+							= quesh
+						p.otvet.desc= ot[index]
+
+
+		include footer.pug

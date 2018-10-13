@@ -1,0 +1,671 @@
+@import "vars"
+@import "mixin"
+@import "fonts"
+@import "libs"
+@import "animate.css"
+@import "slick.css"
+*
+	color: $def-color-text
+
+
+#modalbg
+	overflow: auto
+	position: fixed
+	width: 100%
+	height: 100%
+	background: rgba(black, 0.8)	
+	z-index: 9999
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	padding: 15px
+	display: none
+	input
+		padding: 15px
+		display: block
+		height: 40px
+		width: 100%
+		margin-bottom: 15px
+	[type="submit"]
+		padding: 0
+		border: none
+		background: $accent-color
+		color: white
+		text-transform: uppercase
+		font-weight: bold
+		letter-spacing: 1.5px
+
+	.modalWindow
+		background: #fff
+		margin: auto
+		padding: 35px
+		animation: zoomInUp ease 1s forwards
+		.modalHead
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			span.close
+				width: 32px
+				height: 32px
+				display: block
+				position: relative
+				cursor: pointer
+				.line
+					display: block
+					height: 4px
+					width: 100%
+					border-radius: 1em
+					background: #DF6363
+					position: absolute
+					top: 50%
+				.line:nth-child(1)
+					transform: rotate(45deg)
+				.line:nth-child(2)
+					transform: rotate(-45deg)
+
+			.modalTitle
+				font-size: 20px
+
+.btn-hum
+	display: none
+.top-menu
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	ul 
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			position: relative
+			a
+				color: white
+.top-nav
+	background: $default-bg
+	ul.main-menu-top
+		padding: 0
+		margin: 0
+		margin-right: 50px
+		li
+			position: relative
+			display: inline-block
+			margin-left: 15px
+			a
+				color: white
+				position: relative
+
+	.wrp-submenu
+		z-index: 33
+		position: absolute
+		top: 100%
+		right: -11px
+		padding: 0
+		margin: 0
+		padding-top: 21px
+		display: none
+		li 
+			display: block
+			a
+				min-width: 226px
+				background: #734CDF
+				padding: 15px
+				display: block
+				border: 1px solid #8155FB
+				border-width: 0px 0px 1px 3px
+				transition: 0.3s all
+				text-decoration: none
+				user-select: none
+			a:hover
+				background: #643AD8
+		ul.sublbltr
+			display: none
+			position: absolute
+			top: 0
+			right: 100%
+			animation: fadeInRight 0.2s ease forwards
+			li
+				a
+					background: #643AD8
+	.sublbltr:hover
+		display: block!important
+
+	.auth-link
+		color: white
+		padding: 5px 39px 8px
+		background: $accent-color
+		border-radius: 10em
+		display: inline-block
+		text-transform: lowercase
+		line-height: 1.5
+		margin-left: 28px
+	.container
+		height: 69px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+.searchForm
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex		
+	position: relative
+	flex-grow: 1
+	input
+		border: none
+
+.logotype
+	width: 191px
+	margin-right: 49px
+.searchBtn
+	top: calc(50% - 8px)
+	left: 14px
+	position: absolute
+	width: 17px
+	height: 17px
+	background-color: transparent
+	border: none 
+	padding: 0
+	margin: 0
+	cursor: pointer
+	.icon-top
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+.searchValue
+	padding-left: 54px
+	padding-bottom: 5px
+	width: 100%
+	border-radius: 10em
+	height: 32px
+
+	
+#header-index.header-index
+	background: $index-bg-header
+	background-size: cover
+	background-position: center
+	position: relative
+	height: 463px
+	.container
+		height: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+		.wrp-text-center
+			margin: auto
+			height: 50%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			align-items: center
+#index-demos
+	.container
+.wrp-center-text
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+.list-genre
+	display: block
+	margin: 0 auto
+	padding: 0
+	margin-top: 61px
+	li.li-genre
+		margin-left: 20px
+		display: inline-block
+		a
+			text-decoration: none
+			color: black
+			text-transform: lowercase
+			padding: 5px 15px
+			border-radius: 10em
+			// border: 1px solid transparent
+	li.li-genre
+		a.active
+			color: white
+			background: $accent-color
+.demos-v
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	margin-top: 69px
+	margin-bottom: 63px
+.box
+	margin: 15px 12.5px
+	min-width: 260px
+	min-height: 320px
+	background: #bebebe
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-grow: 1
+.box:nth-child(2n)
+	background: #4d4d4d
+
+
+footer#footer.footer
+	background: $pur-bg
+	padding-top: 59px
+	color: white
+	min-height: 381px
+	.footer-pod
+		margin-bottom: 26px
+		display: block
+		text-transform: uppercase
+		color: white
+	ul
+		padding: 0
+		list-style-type: none
+		li
+			a
+				color: white
+				font-size: 16px
+				font-weight: normal
+.sub-fo
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	padding: 21px 0
+.sub-fot-list
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	list-style-type: none
+	align-items: center
+	padding: 0
+	margin: 0
+	align-self: flex-end
+
+	.sub-foo-icon
+		margin-left: 7.5px
+		img
+			width: 39px
+			height: 25px
+.sub-fot-text
+	margin-right: 21px
+	color: $pur-bg
+	font-size: 16px
+
+.soc-icon-footer
+	margin: 0
+	.soc-item-icon
+		display: inline-block
+		margin-left: 11.3px
+		img
+			width: 25.6px
+	.soc-item-icon:first-child
+		margin-left: 0
+#info-s
+	padding-bottom: 160px
+	padding-top: 250px
+.wrp-info-item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	width: 100%
+	.info-icon
+		margin-bottom: 41px
+	.info-item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-grow: 1
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		min-width: 200px
+		.info-icon
+			img
+				width: 45px
+section#steps
+	background: #F1F6F4
+	padding-bottom: 74px
+	.btn-default
+		margin-top: 103px
+	.section-title
+		margin-bottom: 102px
+	.box-steps
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center		
+		.wrp-steps
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+			.icon-steps
+				margin-bottom: 29px
+				background: #fff
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				width: 90px
+				height: 90px
+				border-radius: 10em
+				img
+					display: block
+					margin: auto
+					width: 40px
+					height: 40px
+		p
+			font-size: 16px
+			font-weight: bold
+			text-transform: uppercase
+			letter-spacing: 1px
+			color: black
+		small
+			font-size: 16px
+.bread-wrp
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+	align-items: center
+	justify-content: space-between
+	height: 76px
+	a
+		color: black
+.page
+	padding-bottom: 124px
+	padding-top: 62px
+	background: rgba(#F1F6F4,0.53)
+	.demos-v
+.wrp-single
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 100%
+	justify-content: center
+	.wrp-single-info
+		margin-right: 50px
+		display: inherit
+		align-items: flex-end
+		flex-direction: column
+		.section-title.single
+			margin-bottom: 53px
+		p.single-description
+			font-size: 24px
+			text-align: right
+			margin-bottom: 29px
+		small.short-desct
+			font-size: 16px
+			margin-bottom: 43px
+		.wrp-info-time
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+
+			align-items: center
+			font-size: 16px
+			margin-bottom: 103px
+			.status
+				background: $accent-color
+				width: 14px
+				height: 14px
+				border-radius: 10em
+				margin-right: 10.6px
+			.self-time
+				margin-left: 14px
+				font-size: 16px
+				font-weight: bold
+
+		button
+			min-width: 200px
+			font-weight: bold
+			letter-spacing: 1px
+			margin: 0 7px
+.wrap-tabs
+	margin-top: 72px
+.tabs-nav
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	li
+		display: inline-block
+		margin-left: 15px
+		cursor: pointer
+		padding: 5px 15px
+		border-radius: 10em
+		transition: 0.3s all
+		border: 1px solid transparent
+	li:hover
+		border: 1px solid $accent-color
+	li.active
+		background: $accent-color
+		color: white
+[index]
+	transition: 0.3s all
+ul.tabs-nav
+	position: relative
+ul.tabs-nav:after
+	content: ''
+	height: 2px
+	border-radius: 1em
+	width: 95%
+	right: 0
+	position: absolute
+	background: #A3A3A3	
+	bottom: -10px
+.tabs-content
+	margin-top: 35px
+	list-style-type: none
+	li
+		display: none
+		p
+			text-align: right
+	li.active
+		display: block
+		opacity: 1
+		// animation: fadeInUp 1s ease forwards
+	li.out
+		animation: flipOutX 1s ease forwards
+.pohozh
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	min-width: 150px
+	.box
+		flex-grow: 1
+		margin: 8px 8px
+		min-height: 310px
+
+
+.wrp-box-tarif
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	width: 100%
+	margin-top: 120px
+	margin-bottom: 139px
+	.box-tarif
+		padding: 0 15px
+		padding-top: 85px
+		padding-bottom: 62px
+
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		margin: 15px 18.5px		
+		width: 417px
+		height: 426px
+		background: #fff
+		align-items: center
+		.tarif-name
+			font-size: 24px
+			text-transform: uppercase
+			margin-bottom: 41px
+		.price-tarif
+			font-size: 32px
+			font-weight: bold
+		button
+			width: 200px
+			margin-top: auto
+.faq-sectino
+	padding-top: 67px
+	padding-bottom: 300px
+	.section-title
+		padding-bottom: 15px
+	.wrp-faq
+		padding-top: 89px
+		a
+			margin-bottom: 45px
+			display: block
+			font-size: 32px
+			color: #666666
+			text-decoration: none
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			transition: 0.3s all
+		a.opened
+			margin-bottom: 0
+		span.arr
+			img
+				width: 45px
+				height: 10px
+		.desc
+			display: none
+			padding: 25px 49px
+.head-2
+	background: url(../img/hh.jpg)
+	height: 309px
+	padding: 0
+	.searchForm
+		max-width: 617px
+		width: 100%
+		input[type=text]
+			height: 45px
+	.head2-title
+		text-transform: uppercase
+		color: white
+		font-size: 32px
+		letter-spacing: 1px
+		margin-bottom: 53px
+.item-box
+	flex-grow: 1
+	min-width: 300px
+	height: 150.3px
+	padding: 14px
+	text-decoration: none !important
+	.item-wrp
+	    background: #fff
+	    position: relative
+	    width: 100%
+	    text-align: center
+	    height: 100%
+	    transition: 0.3s all
+	    p
+		    transition: 0.3s all
+	    	font-size: 24px
+	    	font-weight: bold
+	    	text-transform: uppercase
+	    	letter-spacing: 1px
+.item-wrp.active
+	background: $accent-color
+	p
+		color: white
+
+.item-wrp:hover
+	background: $accent-color
+	p
+		color: white
+
+.qq
+	.section-title
+		margin-top: 118px
+		margin-bottom: 55px
+	button
+		margin-top: 0!important
+		display: block
+		margin: 0 auto
+.pm
+	padding-top: 79px!important
+
+li.items-list
+	position: relative
+li.items-list:after
+    position: absolute
+    width: 1px
+    height: 16px
+    content: ''
+    background: white
+    top: calc(50% - 8px)
+    right: -13%
+li.items-list:last-child:after
+	display: none
+
+
+@import "media"
